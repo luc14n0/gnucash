@@ -12,7 +12,7 @@ if [[ "$BUILDTYPE" == "cmake-make" ]]; then
     make check || ../afterfailure
 elif [[ "$BUILDTYPE" == "cmake-ninja" ]]; then
     cmake ../gnucash -DWITH_PYTHON=ON -DCMAKE_BUILD_TYPE=debug -G Ninja
-    ninja -v
+    ninja -v -j 4
     ninja check || ../afterfailure;
 else
     echo "Unknown buildtype: \"$BUILDTYPE\". Not building."

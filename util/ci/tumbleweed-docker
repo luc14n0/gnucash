@@ -1,5 +1,5 @@
 FROM opensuse/amd64:tumbleweed
-run zypper -nq in --no-recommends boost-devel cmake gcc-c++ gmock gtest intltool libboost_date_time-devel libboost_filesystem-devel libboost_locale-devel libboost_regex-devel libdbi-drivers-dbd-sqlite3 ninja python-devel aqbanking dbi gtk3-devel glib2-devel guile-devel gwenhywfar libicu-devel ktoblzcheck libofx libxml-2.0 libxslt webkit2gtk-4.0 swig > /dev/null
+run zypper -nq in --no-recommends boost-devel cmake gcc-c++ gmock gtest intltool libboost_date_time-devel libboost_filesystem-devel libboost_locale-devel libboost_regex-devel libdbi-drivers-dbd-sqlite3 ninja python-devel pkgconfig(aqbanking) pkgconfig(dbi) gtk3-devel glib2-devel guile-devel pkgconfig(gwenhywfar) libicu-devel pkgconfig(ktoblzcheck) pkgconfig(libofx) pkgconfig(libxml)-2.0 pkgconfig(libxslt) pkgconfig(webkit2gtk-4.0 swig > /dev/null
 copy tumbleweed-testscript afterfailure commonbuild /
 run chmod +x /tumbleweed-testscript /afterfailure /commonbuild
 entrypoint /tumbleweed-testscript

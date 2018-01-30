@@ -1,9 +1,7 @@
 #!/bin/bash -le
 
-export PYTHON=/usr/bin/python2
-
 mkdir ourpython_bin
-ln -s /usr/bin/python2 ourpython_bin/python
+ln -s /usr/bin/python ourpython_bin/python
 export PATH=/ourpython_bin:"$PATH"
 echo path is "$PATH"
 echo python version is "$(python --version)"

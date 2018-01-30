@@ -1,6 +1,6 @@
 FROM opensuse/amd64:tumbleweed
 run zypper -nq in --no-recommends cmake gcc-c++ git gmock gtest intltool libboost_date_time-devel libboost_filesystem-devel \
-libboost_headers-devel libboost_locale-devel libboost_regex-devel libdbi-drivers-dbd-sqlite3 ninja python-base python-devel \
+libboost_headers-devel libboost_locale-devel libboost_regex-devel libdbi-drivers-dbd-sqlite3 ninja python python-devel \
 'pkgconfig(aqbanking)' 'pkgconfig(dbi)' gtk3-devel glib2-devel guile-devel 'pkgconfig(gwenhywfar)' libicu-devel \
 'pkgconfig(ktoblzcheck)' 'pkgconfig(libofx)' 'pkgconfig(libxml-2.0)' 'pkgconfig(libxslt)' 'pkgconfig(webkit2gtk-4.0)' \
 swig > /dev/null

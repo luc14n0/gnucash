@@ -12,10 +12,10 @@ if [[ "$BUILDTYPE" == "cmake-make" ]]; then
     make check || ../afterfailure
 elif [[ "$BUILDTYPE" == "cmake-ninja" ]]; then
     cmake ../gnucash -DWITH_PYTHON=ON -DCMAKE_BUILD_TYPE=debug -G Ninja \
-    -DPYTHON_EXECUTABLE=/usr/bin/python2.7
+    -DPYTHON_EXECUTABLE=/usr/bin/python2.7 \
+    -DGTEST_ROOT=/usr/include/gtest -DGMOCK_ROOT=/usr/include/gmock
     ninja -v
     ninja check || ../afterfailure;
 else
     echo "Unknown buildtype: \"$BUILDTYPE\". Not building."
 fi
-

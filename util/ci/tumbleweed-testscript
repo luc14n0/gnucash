@@ -1,6 +1,7 @@
 #!/bin/bash -le
 
-export PYTHON_EXECUTABLE=/usr/bin/python2
+export PYTHON_LIBRARY=$(python-config --prefix)/lib/libpython2.7.dylib
+export PYTHON_INCLUDE_DIR=$(python-config --prefix)/include/python2.7
 
 export GTEST_ROOT=/usr/include/gtest/src GMOCK_ROOT=/usr/include/gmock/src
 

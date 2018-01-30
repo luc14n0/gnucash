@@ -12,9 +12,7 @@ if [[ "$BUILDTYPE" == "cmake-make" ]]; then
     make check || ../afterfailure
 elif [[ "$BUILDTYPE" == "cmake-ninja" ]]; then
     cmake ../gnucash -DWITH_PYTHON=ON -DCMAKE_BUILD_TYPE=debug -G Ninja \
-    -DPYTHON_EXECUTABLE=/usr/bin/python2.7 \
-    -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so \
-    -DPYTHON_INCLUDE_DIR=/usr/include/python2.7
+    -DPYTHON_EXECUTABLE=/usr/bin/python2.7
     ninja -v
     ninja check || ../afterfailure;
 else

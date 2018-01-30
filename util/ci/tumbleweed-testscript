@@ -1,10 +1,6 @@
 #!/bin/bash -le
 
-mkdir ourpython_bin
-ln -s /usr/bin/python ourpython_bin/python
-export PATH=/ourpython_bin:"$PATH"
-echo path is "$PATH"
-echo python version is "$(python --version)"
+export PYTHON_EXECUTABLE=/usr/bin/python2
 
 export GTEST_ROOT=/usr/include/gtest/src GMOCK_ROOT=/usr/include/gmock/src
 
